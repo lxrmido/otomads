@@ -1,0 +1,264 @@
+body{
+	margin:0;
+	background-color:#baaf95;
+}
+@bYellow:#eace60;
+@bOrange:#ff6f45;
+@bBack:#292f35;
+.header{
+	width:100%;
+	height:271px;
+	background-color:#0d0d0e;
+	position:relative;
+	background-image:url(../res/banner.png);
+	background-size:960px 270px;
+	background-position:center;
+	background-repeat:no-repeat;
+}
+.header-logo{
+	display:block;
+	position:absolute;
+	background-image:url(../res/logo.png);
+	background-size:968px/2 140px/2;
+	background-repeat:no-repeat;
+	background-position:center;
+	width:968px/2;
+	height:140px/2;
+	left:50%;
+	margin-left:-968px/4;
+	top:88px;
+}
+.search-frame{
+	width:320px;
+	height:30px;
+	border:3px @bYellow solid;
+	background-color:#fff;
+	position:absolute;
+	bottom:30px;
+	left:50%;
+	margin-left:-163px;
+	box-shadow:6px 6px 0px 0px rgba(0,0,0,.3);
+	display:block;
+	> input{
+		position:absolute;
+		display:block;
+		margin:0;
+		padding:0;
+		width:200px;
+		height:24px;
+		top:3px;
+		left:10px;
+		border:none;
+		outline:none;
+		color:#333;
+		font-size:15px;
+		font-weight:bold;
+	}
+	> .search-btn{
+		width:50px;
+		height:30px;
+		line-height:30px;
+		position:absolute;
+		right:0;
+		border-left:3px @bYellow solid;
+		cursor:pointer;
+		text-align:center;
+		font-size:15px;
+		color:#333;
+	}
+}
+.page{
+	display:block;
+	width:100%;
+	height:auto;
+	min-height:1px;
+	overflow:hidden;
+	position:relative;
+}
+.bg-area{
+	position:absolute;
+	z-index:100;
+	left:0;
+	right:0;
+	bottom:0;
+	top:0;
+}
+.bg-area:before{
+	content:"";
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	height:130px;
+	background-image:linear-gradient(to bottom, rgba(0, 0, 0, .6), rgba(255, 255, 255, 0));
+}
+.bg-area:after{
+	content:"";
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+	height:75px;
+	background-image:linear-gradient(to top, rgba(0, 0, 0, .3), rgba(255, 255, 255, 0));
+}
+.list-area{
+	position:relative;
+	margin:0 auto;
+	width:480px;
+	height:auto;
+	min-height:300px;
+	overflow:hidden;
+	background-color:#fff;
+	box-shadow:0 6px 6px rgba(0, 0, 0, .3);
+	z-index:1000;
+	> .filter{
+		width:100%;
+		height:32px;
+		> .item{
+			width:124px;
+			height:18px;
+			border-bottom:3px #3de38a solid;
+			line-height:18px;
+			margin:11px 18px 0 18px;
+			text-align:center;
+			font-size:15px;
+		}
+	}
+	> .list-body{
+		width:100%;
+		height:auto;
+		min-height:1px;
+		overflow:hidden;
+		> .item{
+			width:124px;
+			height:124px;
+			margin:18px;
+			float:left;
+			border-radius:62px;
+			background-color:@bBack;
+		}
+	}
+}
+.user-panel{
+	width:130px;
+	height:133px;
+	background-color:#fff;
+	position:absolute;
+	top:62px;
+	left:50%;
+	margin-left:-240px - 62px - 130px;
+	box-shadow:0 6px 6px rgba(0, 0, 0, .3);
+	z-index:1000;
+	> .ava-back{
+		background-color:#fde174;
+		width:100%;
+		height:93px;
+		position:absolute;
+		left:0;
+		top:0;
+		> .avatar{
+			width:60px;
+			height:60px;
+			background-color:@bBack;
+			margin:10px auto 0 auto;
+			border-radius:30px;
+		}
+		> .name{
+			width:100%;
+			height:20px;
+			line-height:20px;
+			font-size:14px;
+			color:@bBack;
+			text-align:center;
+			font-weight:bold;
+		}
+	}
+	> .ctrl{
+		position:absolute;
+		width:65px;
+		height:40px;
+		line-height:40px;
+		text-align:center;
+		color:@bBack;
+		font-size:24px;
+		bottom:0;
+		cursor:pointer;
+	}
+	> .ctrl.up{
+		left:0;
+	}
+	> .ctrl.cog{
+		right:0;
+	}
+	> .ctrl-split{
+		position:absolute;
+		bottom:3px;
+		height:34px;
+		width:4px;
+		background-color:#5361e1;
+		left:63px;
+	}
+}
+.page-cover{
+	display:none;
+	position:fixed;
+	z-index:2000;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	background-color:rgba(0, 0, 0, .6);
+}
+.upload-frame-step-1{
+	width:320px;
+	height:320px;
+	position:fixed;
+	z-index:2100;
+	top:50%;
+	left:50%;
+	margin-left:-160px;
+	margin-top:-160px;
+	background-color:#eeeef6;
+	display:none;
+	> .title{
+		width:100%;
+		height:30px;
+		text-indent:8px;
+		line-height:30px;
+		font-size:15px;
+		color:#fff;
+		background-color:@bBack;
+	}
+	> .close{
+		position:absolute;
+		top:0;
+		right:0;
+		height:30px;
+		width:72px;
+		line-height:30px;
+		text-align:center;
+		cursor:pointer;
+		font-size:20px;
+		color:@bBack;
+		background-color:@bOrange;
+	}
+	> .line-icon{
+		width:100%;
+		height:140px;
+		line-height:140px;
+		font-size:140px;
+		color:@bOrange;
+		text-align:center;
+		clear:both;
+		margin:40px 0 10px 0;
+		cursor:pointer;
+	}
+	> .line-text{
+		width:100%;
+		height:60px;
+		line-height:30px;
+		font-size:18px;
+		color:@bBack;
+		text-align:center;
+	}
+}
